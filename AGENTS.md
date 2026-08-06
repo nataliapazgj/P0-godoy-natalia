@@ -15,7 +15,8 @@ real del computador e implementar y probar una multiplicación de matrices senci
 - No inventar mediciones del computador (CPU, memoria, disco, benchmarks). Los datos
   solo deben obtenerse midiendo de forma real en el equipo.
 - Conservar los datos originales: no sobrescribir ni perder los datos obtenidos.
-- Ejecutar `pytest` después de modificar código para verificar que todo siga pasando.
+- Ejecutar `python -m pytest` después de modificar código para verificar que todo
+  siga pasando.
 - No crear matrices tan grandes que puedan agotar la memoria del equipo.
 - No subir credenciales, archivos `.env` ni el ambiente virtual (`.venv`).
 - No ejecutar comandos destructivos de Git como `git reset --hard`.

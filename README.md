@@ -32,9 +32,25 @@ pip install -r requirements.txt
 > Nota: si PowerShell bloquea la activación por la política de ejecución, usar:
 > `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
+## Ejecución
+
+Generar la información del computador en `data/system_info.json`:
+
+```powershell
+python src/system_info.py
+```
+
+Ejecutar las pruebas:
+
+```powershell
+python -m pytest
+```
+
 ## Estado actual del proyecto
 
 - Ambiente virtual configurado con las dependencias instaladas.
-- Comienzo de la entrega P0E1 del Proyecto 0.
-- Aún no se reportan resultados, benchmarks ni datos del computador: se incorporarán
-  solo cuando sean medidos de forma real en el equipo.
+- Implementado `src/system_info.py`, que obtiene datos reales del computador y los
+  guarda en `data/system_info.json`.
+- Generado `data/system_info.json` con datos reales del computador.
+- Implementado `src/mimatmul.py` (multiplicación de matrices con ciclos explícitos).
+- Existen dos pruebas iniciales en `tests/test_mimatmul.py`, ambas aprobadas.
