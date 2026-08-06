@@ -1,0 +1,10 @@
+{
+  "sistema_operativo": "Windows 10",
+  "arquitectura": "AMD64",
+  "version_python": "3.11.2",
+  "version_numpy": "2.4.6",
+  "modelo_procesador": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+  "nucleos_fisicos": 2,
+  "procesadores_logicos": 4,
+  "memoria_ram_total": 12699291648
+}
