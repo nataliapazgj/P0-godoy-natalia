@@ -3,6 +3,11 @@
 Instrucciones permanentes para trabajar en este repositorio con OpenCode (u otros
 agentes de IA).
 
+## Propósito del proyecto
+
+El Proyecto 0 busca configurar un ambiente reproducible en Python, obtener información
+real del computador e implementar y probar una multiplicación de matrices sencilla.
+
 ## Reglas generales
 
 - Mantener el código sencillo y fácil de explicar. Evitar soluciones excesivamente
