@@ -1,5 +1,6 @@
 import json
 import platform
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -8,9 +9,30 @@ import psutil
 
 def obtener_dato(funcion):
     try:
-        return funcion()
+        valor = funcion()
+        if valor is None or valor == "":
+            return "No disponible"
+        return valor
     except Exception:
         return "No disponible"
+
+
+def obtener_modelo_gpu():
+    resultado = subprocess.run(
+        [
+            "powershell",
+            "-NoProfile",
+            "-Command",
+            "(Get-CimInstance Win32_VideoController).Name",
+        ],
+        capture_output=True,
+        text=True,
+        timeout=10,
+    )
+    nombre = resultado.stdout.strip()
+    if not nombre:
+        raise ValueError("No se encontro modelo de GPU")
+    return nombre
 
 
 def obtener_info_sistema():
@@ -23,6 +45,10 @@ def obtener_info_sistema():
         "nucleos_fisicos": obtener_dato(lambda: psutil.cpu_count(logical=False)),
         "procesadores_logicos": obtener_dato(lambda: psutil.cpu_count(logical=True)),
         "memoria_ram_total": obtener_dato(lambda: psutil.virtual_memory().total),
+        "memoria_ram_disponible": obtener_dato(lambda: psutil.virtual_memory().available),
+        "modelo_gpu": obtener_dato(obtener_modelo_gpu),
+        "disco_total": obtener_dato(lambda: psutil.disk_usage("/").total),
+        "disco_disponible": obtener_dato(lambda: psutil.disk_usage("/").free),
     }
 
 

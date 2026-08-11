@@ -6,5 +6,9 @@
   "modelo_procesador": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
   "nucleos_fisicos": 2,
   "procesadores_logicos": 4,
-  "memoria_ram_total": 12699291648
+  "memoria_ram_total": 12699291648,
+  "memoria_ram_disponible": 5907173376,
+  "modelo_gpu": "Intel(R) UHD Graphics",
+  "disco_total": 510913409024,
+  "disco_disponible": 230468624384
 }
