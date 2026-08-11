@@ -91,7 +91,10 @@ mientras que NumPy es mucho más rápido.
 
 ## Observaciones de rendimiento
 
-Mediciones reales obtenidas durante una ejecución extendida de ambos métodos:
+Los valores siguientes provienen de ejecuciones extendidas de ambos métodos,
+realizadas específicamente para observar CPU, memoria y GPU en el Administrador de
+tareas. Son mediciones separadas del benchmark definitivo de tamaños 25, 50, 75
+y 100, cuyos resultados están en `data/benchmark_results.csv`:
 
 - `mimatmul`, n=250, 4 repeticiones: 38.267 s
 - CPU observada de `mimatmul`: aproximadamente 22 %
